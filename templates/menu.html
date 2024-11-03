@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 1em;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Menú</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('menu') }}">Menú</a></li>
+            <li><a href="{{ url_for('add_product') }}">Agregar Producto</a></li>
+            <li><a href="{{ url_for('delete_product') }}">Eliminar Producto</a></li>
+            <li><a href="{{ url_for('list_products') }}">Lista de Productos</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

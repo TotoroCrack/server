@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Producto</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 1em;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eliminar Producto</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('menu') }}">Menú</a></li>
+            <li><a href="{{ url_for('list_products') }}">Lista de Productos</a></li>
+        </ul>
+    </nav>
+    <form method="POST" action="{{ url_for('delete_product') }}">
+        <label for="No. de parte">No. de parte:</label>
+        <input type="text" id="No. de parte" name="No. de parte"><br>
+        <button type="submit">Eliminar Producto</button>
+    </form>
+</body>
+</html>
